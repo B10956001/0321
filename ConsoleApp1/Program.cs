@@ -16,16 +16,25 @@ namespace ConsoleApp1
 
             //await MyHttpClientAsync();
 
+            //FileService File = new FileService();
+            Console.WriteLine("請設定最小數字：");
+            int min = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("請設定最大數字：");
+            int max = Convert.ToInt32(Console.ReadLine());
+            Game(min, max);
+
+        }
+        static private void Game(int min,int max)
+        {
             int guess = 0, count = 1;
-            int Ans = MyRandom(1, 100);
-            int min = 1, max = 100;
+            int Ans = MyRandom(min, max);
             while (Ans != guess)
             {
                 Console.WriteLine();
                 Console.WriteLine("第" + count + "次");
                 Console.WriteLine("請輸入一個數字(" + min + "~" + max + ")：");
                 guess = Convert.ToInt32(Console.ReadLine());
-                while(guess>max || guess < min)
+                while (guess > max || guess < min)
                 {
                     Console.WriteLine("請重新輸入一個數字(" + min + "~" + max + ")：");
                     guess = Convert.ToInt32(Console.ReadLine());
