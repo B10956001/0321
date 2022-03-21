@@ -17,11 +17,17 @@ namespace ConsoleApp1
             //await MyHttpClientAsync();
 
             //FileService File = new FileService();
-            Console.WriteLine("請設定最小數字：");
-            int min = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("請設定最大數字：");
-            int max = Convert.ToInt32(Console.ReadLine());
-            GameGuessNum(min, max);
+            int input = 0;
+            do
+            {
+                Console.WriteLine("請設定最小數字：");
+                int min = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("請設定最大數字：");
+                int max = Convert.ToInt32(Console.ReadLine());
+                GameGuessNum(min, max);
+                Console.WriteLine("1：繼續遊戲\t 2：退出遊戲");
+                input = Convert.ToInt32(Console.ReadLine());
+            } while (input != 2);
 
         }
         static private void GameGuessNum(int min,int max) //猜數字遊戲
