@@ -15,10 +15,38 @@ namespace ConsoleApp1
             //myCar.OpenDoor();
 
             //await MyHttpClientAsync();
-
-            Console.WriteLine(MyRandom(10, 20));
+            int guess = 0, count = 1;
+            int Ans = MyRandom(1, 100);
+            int min = 1, max = 100;
+            while (Ans != guess)
+            {
+                Console.WriteLine();
+                Console.WriteLine("第" + count + "次");
+                Console.WriteLine("請輸入一個數字(" + min + "~" + max + ")：");
+                guess = Convert.ToInt32(Console.ReadLine());
+                while(guess>max || guess < min)
+                {
+                    Console.WriteLine("請重新輸入一個數字(" + min + "~" + max + ")：");
+                    guess = Convert.ToInt32(Console.ReadLine());
+                }
+                if (guess == Ans)
+                {
+                    Console.WriteLine("正確,共猜了" + count + "次");
+                }
+                else if (guess > Ans)
+                {
+                    max = guess;
+                    Console.WriteLine("答案介於" + min + "~" + max + "之間");
+                }
+                else if (guess < Ans)
+                {
+                    min = guess;
+                    Console.WriteLine("答案介於" + min + "~" + max + "之間");
+                }
+                count++;
+            }
         }
-        static private int MyRandom(int min,int max)
+        static private int MyRandom(int min, int max)
         {
             Random random = new Random();
             return random.Next(min, max + 1);
