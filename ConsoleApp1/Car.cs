@@ -17,6 +17,20 @@ namespace ConsoleApp1
         public void ShowInfo()
         {
             Console.WriteLine("車色：" + color);
+            Console.WriteLine("CC數：" + cc);
+            Console.WriteLine("廠牌：" + brand);
+        }
+        public void ChangeColor(string color)
+        {
+            this.color = color;
+            Console.WriteLine();
+            Console.WriteLine("--------車色變更--------");
+            Console.WriteLine("車色：" + color);
+            Console.WriteLine("------------------------");
+        }
+        public virtual void OpenDoor()
+        {
+            Console.WriteLine("側開車門");
         }
     }
 }

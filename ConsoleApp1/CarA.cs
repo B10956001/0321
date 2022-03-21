@@ -4,7 +4,11 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    class CarA:Car
+    class CarA:Car //繼承
     {
+        public override void OpenDoor()
+        {
+            Console.WriteLine("上開");
+        }
     }
 }
