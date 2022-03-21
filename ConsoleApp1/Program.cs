@@ -19,7 +19,7 @@ namespace ConsoleApp1
         {
             HttpClient client = new HttpClient();
             //string url = "https://www.google.com/";
-            string url = "	https://ws.kinmen.gov.tw/001/Upload/0/relfile/0/0/07053f4e-31bc-41b9-913d-fc2c25480991.json";
+            string url = "https://ws.kinmen.gov.tw/001/Upload/0/relfile/0/0/07053f4e-31bc-41b9-913d-fc2c25480991.json";
             try
             {
                 HttpResponseMessage response = await client.GetAsync(url);
