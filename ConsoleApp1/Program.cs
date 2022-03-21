@@ -24,7 +24,7 @@ namespace ConsoleApp1
             Game(min, max);
 
         }
-        static private void Game(int min,int max)
+        static private void Game(int min,int max) //猜數字遊戲
         {
             int guess = 0, count = 1;
             int Ans = MyRandom(min, max);
