@@ -21,10 +21,10 @@ namespace ConsoleApp1
             int min = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("請設定最大數字：");
             int max = Convert.ToInt32(Console.ReadLine());
-            Game(min, max);
+            GameGuessNum(min, max);
 
         }
-        static private void Game(int min,int max) //猜數字遊戲
+        static private void GameGuessNum(int min,int max) //猜數字遊戲
         {
             int guess = 0, count = 1;
             int Ans = MyRandom(min, max);
