@@ -12,8 +12,17 @@ namespace ConsoleApp1
             //Car myCar = new Car();
             //myCar.ShowInfo();
             //myCar.ChangeColor("black");
-            ////myCar.OpenDoor();
-            await MyHttpClientAsync();
+            //myCar.OpenDoor();
+
+            //await MyHttpClientAsync();
+
+            Console.WriteLine(MyRandom(10, 20));
+        }
+        static private int MyRandom(int min,int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max + 1);
+
         }
         static private async Task MyHttpClientAsync()
         {
